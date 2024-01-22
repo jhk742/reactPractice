@@ -3,15 +3,26 @@ import memesData from '../data/memesData'
 
 export default function Meme() {
 
-    const [memeImage, setMemeImage] = useState("");
-    const [topText, setTopText] = useState("")
-    const [bottomText, setBottomText] = useState("")
+    const [meme, setMeme] = useState({
+        topText: "",
+        bottomText: "",
+        randomImage: ""
+    })
+
+    const [allMemeImages, setAllMemeImages] = useState(memesData)
+
 
     function getMemeImage() {
-        const memesArray = memesData.data.memes;
-        setMemeImage(memesArray[Math.floor(Math.random() * memesArray.length)].url);
-        // setTopText()
-        // setBottomText()
+        // const memesArray = memesData.data.memes;
+        // setMemeImage(memesArray[Math.floor(Math.random() * memesArray.length)].url);
+        // // setTopText()
+        // // setBottomText()
+        const memesArray = allMemeImages.data.memes;
+        setMeme(({
+            topText: "",
+            bottomText: "",
+            randomImage: memesArray[Math.floor(Math.random() * memesArray.length)].url
+        }))
     }
     return (
         <main className="form">
@@ -30,9 +41,9 @@ export default function Meme() {
                     className="form--btn--submit"
                     onClick={getMemeImage}
                 >Get a new meme image</button>
-                {topText && <p className="toptext">{topText}</p>}
-                {bottomText && <p className="bottomtext">{bottomText}</p>}
-                {memeImage && <img src={memeImage} alt="meme" className="meme"></img>}
+                {/* {topText && <p className="toptext">{topText}</p>}
+                {bottomText && <p className="bottomtext">{bottomText}</p>} */}
+                {meme.randomImage && <img src={meme.randomImage} alt="meme" className="meme"></img>}
             </div>
         </main>
     )
