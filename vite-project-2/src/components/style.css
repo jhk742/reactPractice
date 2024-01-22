@@ -1,0 +1,96 @@
+html, body {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+.navBar {
+    box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.1);
+    height: 7vh;
+}
+
+.airbnblogo {
+    margin: 20px 0px 0px 20px;
+}
+
+.div--hero {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.div--hero img {
+    max-width: 700px;
+    align-self: center;    
+}
+.div--hero h1 {
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.div--hero p {
+    font-weight: 300;
+    margin-bottom: 0;
+}
+
+
+.card--container {
+    display: flex;
+}
+
+.div--card {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 30px;
+    font-size: 11px;
+    position: relative;
+}
+
+.card--badge {
+    position: absolute;
+    background: #fff;
+    color: #000;
+    padding: 3px;
+    top: 15px;
+    left: 40px;
+    border-radius: 3px;
+}
+
+.card--img {
+    box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.div--card img {
+    max-width: 170px;
+    height: auto;
+}
+
+.card--text {
+    display: flex;
+    align-items: center;
+    height: 40px;
+}
+
+.card--text img {
+    width: 14px;
+    height: 14px;
+    padding-right: 5px;
+}
+
+.div--card p {
+    margin: 0;
+}
+
+.gray {
+    color: #918E9B;
+}
+
+.space {
+    padding: 0px 3px;
+}
+
+.card--container {
+    display: flex;
+    align-items: center;
+}

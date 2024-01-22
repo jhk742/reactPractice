@@ -1,0 +1,93 @@
+body, html {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* HEADER - NAV*/
+
+.navBar {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to right, #672280, #A626D3);
+    height: 80px;
+    justify-content: space-between;
+}
+
+.navBar--logo {
+    display: flex;
+    align-items: center;
+    color: white;
+    padding: 20px;
+}
+
+.navBar--logo h1 {
+    font-family: "Karla", sans-serif;
+    font-weight: 700;
+    margin-left: 10px;
+}
+
+.navBar--logo img {
+    width: 75px;
+    height: auto;
+}
+
+.navBar h4 {
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    color: white;
+    padding-right: 20px;
+}
+
+/* FORM */
+.form--input--container {
+    font-family: "Karla", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    color: #374151;
+    margin-bottom: 10px;
+}
+
+.form--input {
+    margin: 0px 20px 0px 20px;
+}
+
+.form--input > p {
+    margin-bottom: 5px;
+}
+
+.form--input > input {
+    width: 222px;
+    height: 35px;
+    border-radius: 5px;
+    border: 1px solid #D1D5DB;
+    text-indent: 5px;
+}
+
+.meme--container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form--btn--submit {
+    font-family: "Karla", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: white;
+    background: linear-gradient(to right, #711F8D, #A818DA);
+    width: 500px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.meme {
+    max-width: 500px;
+    height: auto;
+}

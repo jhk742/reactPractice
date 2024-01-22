@@ -1,0 +1,66 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+.nav {
+  background-color: #21222A;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav div{
+  margin: 0px 10px;
+}
+
+.nav h4 {
+  margin-right: 10px;
+}
+.navLogo {
+  display: flex;
+  align-items: center;
+}
+
+.navLogo img {
+  width: 30px;
+  height: 30px;
+}
+.navWordLogo {
+  color: #61DAFB;
+  font-weight: 700;
+  margin-left: 5px;
+}
+
+.navTitle { 
+  color: #DEEBF8;
+  font-weight: 600;
+}
+
+.mainDiv {
+  margin: 0px 0px 20px 40px;
+}
+
+
+.mainTitle {
+  color: #fff;
+  font-weight: 700;
+}
+
+.mainList li {
+  color: #fff;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+
+.mainList li::marker {
+  color: #61DAFB;
+}
+
+.container {
+  background-color: #282D35;
+  height: 100vh;
+}
