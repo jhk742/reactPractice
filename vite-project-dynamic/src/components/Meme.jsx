@@ -11,29 +11,48 @@ export default function Meme() {
 
     const [allMemeImages, setAllMemeImages] = useState(memesData)
 
+    console.log(meme)
 
     function getMemeImage() {
-        // const memesArray = memesData.data.memes;
-        // setMemeImage(memesArray[Math.floor(Math.random() * memesArray.length)].url);
-        // // setTopText()
-        // // setBottomText()
         const memesArray = allMemeImages.data.memes;
-        setMeme(({
-            topText: "",
-            bottomText: "",
+        setMeme(prevMeme => ({
+            ...prevMeme,
             randomImage: memesArray[Math.floor(Math.random() * memesArray.length)].url
         }))
     }
+
+    function handleChange(event) {
+        const {name, value} = event.target
+        setMeme(prev => {
+            return {
+                ...prev,
+                [name]: value
+            }
+        })
+    }
+
     return (
         <main className="form">
             <form className="form--input--container">
                 <div className="form--input">
                     <p>Top text</p>
-                    <input type="text" placeholder="Enter text here..." />
+                    <input 
+                        type="text" 
+                        placeholder="Enter text here..." 
+                        name="topText"
+                        value={meme.topText}
+                        onChange={handleChange}
+                    />
                 </div>
                 <div className="form--input">
                     <p>Bottom text</p>
-                    <input type="text" placeholder="Enter text here..." />
+                    <input 
+                        type="text" 
+                        placeholder="Enter text here..." 
+                        name="bottomText"
+                        value={meme.bottomText}
+                        onChange={handleChange}
+                    />
                 </div>
             </form>
             <div className="meme--container">
@@ -41,14 +60,13 @@ export default function Meme() {
                     className="form--btn--submit"
                     onClick={getMemeImage}
                 >Get a new meme image</button>
-                {/* {topText && <p className="toptext">{topText}</p>}
-                {bottomText && <p className="bottomtext">{bottomText}</p>} */}
                 {meme.randomImage && <img src={meme.randomImage} alt="meme" className="meme"></img>}
+                {meme.randomImage && <h2 className="meme--text top">{meme.topText}</h2>}
+                {meme.randomImage && <h2 className="meme--text bottom">{meme.bottomText}</h2>}
             </div>
         </main>
     )
 }
-
 /** 
 import React from 'react';
 import ReactDOM from 'react-dom';
